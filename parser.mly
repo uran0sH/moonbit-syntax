@@ -259,7 +259,7 @@ simple_expr:
   | c=constr {}
   | f=simple_expr "(" args=list_commas(expr) ")" {}
   | obj=simple_expr  "[" index=expr "]" {}
-  | self=simple_expr method_=DOT_IDENT "(" args=list_commas(expr) ")" {}
+  | self=simple_expr meth=DOT_IDENT "(" args=list_commas(expr) ")" {}
   | record=simple_expr accessor=accessor %prec prec_field {}
   | type_name=qual_ident_ty method_name=COLONCOLON_LIDENT {}
   | "("  bs=list_commas(expr) ")" {}
