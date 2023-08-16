@@ -17,14 +17,20 @@
   </head>
   <body>
     <h1>Wasm Demo</h1>
+    <label for="inputValue">Fibonacci input:</label>
     <input type="number" id="inputValue" placeholder="number" value="46" />
+    <br />
+    <label for="loopsValue">Repeating times:</label>
     <input type="number" id="loopsValue" placeholder="loops" value="100000" />
+    <br />
+    <label for="lang-select">Choose language:</label>
     <select name="languages" id="lang-select">
       <option value="moonbit">MoonBit</option>
       <option value="assemblyscript">AssemblyScript</option>
       <option value="golang">Go</option>
     </select>
-    <button id="run">Call Wasm Function(fib2)</button>
+    <br />
+    <button id="run">Call Wasm Function</button>
     <div id="result"></div>
     <script src="wasm_exec.js"></script>
     <script>
